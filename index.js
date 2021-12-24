@@ -2,7 +2,7 @@ const ZKLib = require("./zklib");
 const axios = require("axios");
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 const test = async () => {
   let zkInstance = new ZKLib("110.93.246.50", 4370, 10000, 4000);
@@ -72,6 +72,6 @@ app.get("/abc", (req, res) => {
   test();
 });
 
-app.listen(port, () => {
+app.listen(port || 5000, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
