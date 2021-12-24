@@ -4,7 +4,7 @@
   "description": "light weight module for connect to biometrix device",
   "main": "zklib.js",
   "scripts": {
-    "test": "node test"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
